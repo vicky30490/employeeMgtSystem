@@ -1,0 +1,32 @@
+
+  <div class="row" >
+    <div class="col-xs-12 col-sm-3" ng-repeat="emp in  empCtrl.empData | filter: empCtrl.searchBy | orderBy:empCtrl.orderByField">
+      <div class="card-view">
+        <div class="card-header">
+          <div class="box box-widget widget-user no-padding">
+         
+            <div class="widget-user-header bg-yellow">
+              <h3 class="widget-user-username" ng-bind="emp.name"> </h3>
+              <h5 class="widget-user-desc" ng-bind="emp.title"> </h5>
+            </div>
+            <div class="box-footer no-padding">
+              <ul class="nav nav-stacked">
+                <li><a href="#">Date of birth <span class="pull-right badge bg-blue" ng-bind="emp.dob |  date :'dd/MM/yyyy'"></span></a></li>
+                <li><a href="#">Date of Joining <span class="pull-right badge bg-aqua" ng-bind="emp.doj | date :'dd/MM/yyyy'"></span></a></li>
+                <li><a href="#">Department <span class="pull-right badge bg-blue" ng-bind="emp.department"></span></a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+              
+
+
+</div>
+         
+
+
+
+

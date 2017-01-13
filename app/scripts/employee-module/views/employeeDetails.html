@@ -1,0 +1,64 @@
+<section class="content" style="padding:20px;">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12 col-xs-12">
+            <div class="box clearfix no-border">
+               <div class="box-header with-border clearfix bg-orange">
+                  <h3 class="box-title text-white">Employee List</h3>
+               </div>
+               <div class="box-body">
+                  <div class="row">
+                     <div class="col-xs-3">
+                        <div class="form-group">
+                           <select class="form-control" 
+                              ng-model="empCtrl.sortOption"  
+                              ng-options="option.id as option.description for option in empCtrl.sortOptions"  
+                              ng-change="empCtrl.sortEmployees()">
+                              <option value="">---Select Option to Sort---</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-xs-2">
+                        <h4>Sort By</h4>
+                     </div>
+                     <div class="col-xs-3">
+                        <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Enter to Search Data" ng-model="empCtrl.searchBy"/>
+                        </div>
+                     </div>
+                     <div class="col-xs-2">
+                        <h4>Search By</h4>
+                     </div>
+                     <div class="col-xs-2">
+                        <a href="#addEmployee" class="btn btn-primary pull-right btn-sm" data-toggle="modal">Add Employee</a>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-12">
+                        <header class='nav-tab bg-blue'>
+                           <div class='card-type clearfix'> 
+                              <a class='card active text-center' data-toggle="tab" href='#1' ng-class="{'active': empCtrl.viewTabFlags.cardView}" ng-click="empCtrl.toggleTab('cardView')"> <i class="fa fa-th-large"></i><br />Card </a> 
+                              <a class='card text-center' ng-click="empCtrl.toggleTab('detailView')" ng-class="{'active': empCtrl.viewTabFlags.detailView}" data-toggle="tab" href='#2'> <i class="fa fa-list"></i><br />Detailed </a> 
+                              <a class='card text-center'ng-click="empCtrl.toggleTab('listView')" ng-class="{'active': empCtrl.viewTabFlags.listView}"  data-toggle="tab" href='#3'> <i class="fa fa-table"></i><br />  List </a> 
+                           </div>
+                        </header>
+                        <div class='content tab-content'>
+                           <div class="tab-pane fade in active form" id="1">
+                              <div ng-include="'scripts/employee-module/views/employee-card-view.html'"></div>
+                           </div>
+                           <div class="tab-pane fade form" id="2">
+                              <div ng-include="'scripts/employee-module/views/employee-detailed-view.html'"></div>
+                           </div>
+                           <div class="tab-pane fade form" id="3">
+                              <div ng-include="'scripts/employee-module/views/employee-list-view.html'"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<div ng-include="'scripts/employee-module/views/add-employee-pop-up.html'"></div>

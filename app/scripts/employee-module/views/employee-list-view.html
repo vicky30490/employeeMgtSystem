@@ -1,0 +1,30 @@
+   <div class="box">
+    <div class="box-body">
+    <table width="100%" class="table table-hover table-bordered" id="dataTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Date of birth</th>
+            <th>Date of Joining</th>
+            <th>Department</th>
+            <th>Title </th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="emp in  empCtrl.empData | filter: empCtrl.searchBy | orderBy:empCtrl.orderByField">
+
+            <td ng-bind="$index+1"></td>
+            <td><span class="text-nowrap" ng-bind="emp.name"></span></td>
+            <td  ng-bind="emp.dob | date :'dd/MM/yyyy'"></td>
+            <td  ng-bind="emp.doj | date :'dd/MM/yyyy'"></td>
+            <td  ng-bind="emp.department"></td>
+            <td ng-bind="emp.title"></td>
+
+                 
+       </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>

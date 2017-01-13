@@ -1,0 +1,75 @@
+﻿.header .container .row { padding:10px;}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+.box-header.with-border {border-bottom: 1px solid #f4f4f4;}
+.box-header .box-title {display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;}
+.box {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 3px;
+    border-top: 3px solid #d2d6de;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+.box-body {
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;
+    padding:10px
+}
+
+.text-white { color:#fff;}
+
+.bg-orange { background-color:#FF641E;}
+.no-border { border:0 ;}
+.no-shadow { box-shadow:none ;}
+
+.round-btn { border-radius:20px; background-color:#09c; padding:5px 15px; font-size:12px; text-decoration:none !important; color:#fff;}
+.round-btn:hover, .round-btn:hover:focus, .round-btn:hover:visited {background-color:#337ab7; text-decoration:none; color:#fff;}
+
+.widget-user .widget-user-header {
+    padding:20px;
+    border-top-right-radius:3px;
+    border-top-left-radius:3px
+}
+.widget-user .widget-user-username {
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size:18px;
+    color:#fff;
+    font-weight:normal;
+}
+.widget-user .widget-user-desc {
+    margin-top:0;
+    color:#fff;
+}
+
+
+.nav-tab a {
+border-radius:10px 10px 0 0;
+background-color:#eee;
+    padding:10px 25px;
+    color:#555;
+    float:left;
+    margin:0 3px 0 0;
+    text-decoration:none ;
+}
+.nav-tab a.active {
+    background-color:#09c;
+    color:#fff;
+}
+.tab-content {
+    border:1px solid #09c;
+}
+
+.bg-yellow {background-color: #f39c12 ;}

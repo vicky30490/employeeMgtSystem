@@ -1,0 +1,33 @@
+<div class="row"   ng-repeat="emp in  empCtrl.empData | filter: empCtrl.searchBy | orderBy:empCtrl.orderByField">
+  <div class="col-xs-12 col-sm-12">
+    <div class="list-view">
+      <div class="box border">
+        <div class="box-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-3"> <small class="text-muted"><strong>Employee Name</strong></small>
+                <p  ng-bind="emp.name"> </p>
+              </div>
+              <div class="col-md-2"> <small class="text-muted"><strong>Date of birth</strong></small>
+                <p   ng-bind="emp.dob | date :'dd/MM/yyyy'"></p>
+              </div>
+              <div class="col-md-2"> <small class="text-muted"><strong>Date of Joining</strong></small>
+                <p  ng-bind="emp.doj | date :'dd/MM/yyyy'"></p>
+              </div>
+              <div class="col-md-3"> <small class="text-muted"><strong>Department</strong></small>
+                <p  ng-bind="emp.department"></p>
+              </div>
+              <div class="col-md-2"> <small class="text-muted"><strong>Title</strong></small>
+                <p  ng-bind="emp.title"></p>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+              

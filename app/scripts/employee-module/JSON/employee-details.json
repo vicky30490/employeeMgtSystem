@@ -1,0 +1,39 @@
+{
+    "employeeDetails": [{
+        "name": "Ankur",
+        "dob": "04/20/1994",
+        "doj": "06/19/2014",
+        "department": "technology",
+        "title": "Sr Associate"
+    }, {
+        "name": "Vikas",
+        "dob": "04/20/1992",
+        "doj": "07/14/2015",
+        "department": "technology",
+        "title": "Associate"
+    }, {
+        "name": "Anuj",
+        "dob": "10/04/1990",
+        "doj": "08/11/2010",
+        "department": "technology",
+        "title": "Consultant"
+    }, {
+        "name": "Yaspal",
+        "dob": "06/08/1986",
+        "doj": "10/03/2002",
+        "department": "admin",
+        "title": "Manager"
+    }, {
+        "name": "Jasleen",
+        "dob": "12/03/1980",
+        "doj": "09/25/2016",
+        "department": "admin",
+        "title": "Sr Manager"
+    }, {
+        "name": "panakaj",
+        "dob": "12/27/1985",
+        "doj": "11/29/2016",
+        "department": "technology",
+        "title": "Sr Associate"
+    }]
+}
