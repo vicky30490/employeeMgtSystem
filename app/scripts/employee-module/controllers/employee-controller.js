@@ -6,7 +6,7 @@
  * @description Controller for employee details
   */
 angular.module('employeeMgtApp.employee')
-  .controller('employeeController', function ($http,employeeConstants) {
+  .controller('employeeController', function ($http,employeeConstants,employeeFactory) {
 
 var self=this;
 
@@ -16,19 +16,11 @@ var self=this;
     * @description function to initialize the controller
    
     */
- var init=function(){
+ var init=function(){  
 
-    self.viewTabFlags={
-                      'cardView':true,
-                      'detailView':false,
-                      'listView':false
-                      };
-
-    self.sortOptions=[
-                      {'id':"name",'description':'Name'},
-                      {'id':'doj' ,'description':'Date Of Joining'},
-                      {'id':'dob','description':'Date of Birth'}
-                    ];
+    var initData  =   employeeFactory.getinitData();
+    self.viewTabFlags=initData.viewTabFlags;
+    self.sortOptions=initData.sortOptions;
 
     $http.get(employeeConstants.EMPLOYEE_DATA_FILE).then(function(resp){
 		self.empData=resp.data.employeeDetails;	

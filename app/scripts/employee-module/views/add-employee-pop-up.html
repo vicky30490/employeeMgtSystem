@@ -1,7 +1,7 @@
 <div class="modal" id="addEmployee">
   <div class="modal-dialog" style=" height:60%;">
     <div class="modal-content">
-<form  >
+<form  name="empForm"  ng-submit="empCtrl.addEmployee(empCtrl.employeeInfo)">
       <div class="modal-header gradient-diag1">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
         <h4 class="modal-title" id="popupAddLabel">Add Employee </h4>
@@ -15,7 +15,8 @@
           <div class="col-xs-6">
           <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control"  ng-model="empCtrl.employeeInfo.name"/>
+          <input type="text" class="form-control" name="empName" ng-model="empCtrl.employeeInfo.name" required/>
+           <p ng-show="empForm.empName.$invalid && !empForm.empName.$pristine" >Employee name is required.</p>
           </div>
           </div>
           
@@ -23,7 +24,7 @@
           <div class="form-group">
           <label>Date of Birth</label>
           
-          <input type="date"  class="form-control" ng-model="empCtrl.employeeInfo.dob"/> 
+          <input type="date"  class="form-control" ng-model="empCtrl.employeeInfo.dob" required/> 
 
           </div>
           </div>
@@ -31,21 +32,21 @@
           <div class="col-xs-6">
           <div class="form-group">
           <label>Date of Joining</label>
-          <input type="date" class="form-control" ng-model="empCtrl.employeeInfo.doj"/>
+          <input type="date" class="form-control" ng-model="empCtrl.employeeInfo.doj" required/>
           </div>
           </div>
           
           <div class="col-xs-6">
           <div class="form-group">
           <label>Department</label>
-          <input type="text" class="form-control" ng-model="empCtrl.employeeInfo.department"/>
+          <input type="text" class="form-control" ng-model="empCtrl.employeeInfo.department" required/>
           </div>
           </div>
           
           <div class="col-xs-6">
           <div class="form-group">
           <label>Title</label>
-          <input type="text" class="form-control" ng-model="empCtrl.employeeInfo.title"/>
+          <input type="text" class="form-control" ng-model="empCtrl.employeeInfo.title" required/>
           </div>
           </div> 
           
@@ -55,7 +56,7 @@
       </div>
       <div class="modal-footer"> 
         <button data-dismiss="modal" class="btn btn-default">Cancel</button> 
-        <button data-dismiss="modal" type="submit" class="btn btn-primary no-margin" ng-click="empCtrl.addEmployee(empCtrl.employeeInfo)">Add</button>
+        <button data-dismiss="modal" type="submit" class="btn btn-primary no-margin" >Add</button>
       </div>
 
  </form>
